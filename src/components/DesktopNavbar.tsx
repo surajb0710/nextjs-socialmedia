@@ -5,7 +5,7 @@ import { SignInButton, UserButton } from '@clerk/nextjs';
 import ModeToggle from './ModeToggle';
 import { currentUser } from '@clerk/nextjs/server';
 
-async function DesktopNavbar() {
+const DesktopNavbar = async () => {
   const user = await currentUser();
 
   return (
@@ -47,5 +47,5 @@ async function DesktopNavbar() {
       )}
     </div>
   );
-}
+};
 export default DesktopNavbar;
